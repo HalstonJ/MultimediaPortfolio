@@ -1,4 +1,3 @@
-<!-- ========================= index.html (HOME PAGE) ========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,30 +32,12 @@ nav a {
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    position: relative;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background: #000000;
-    box-shadow: 0 0 10px #000000;
-    transition: width 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #000000;
     text-shadow: 0 0 12px #ffffff;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 /* ---------- TITLE SECTION ---------- */
@@ -85,7 +66,7 @@ nav a:hover::after {
 /* ---------- HEADER SLIDESHOW ---------- */
 header {
     width: 100%;
-    height: 600px;
+    height: 800px; /* vertical phone-style slideshow */
     position: relative;
     overflow: hidden;
     background: #050505;
@@ -94,7 +75,7 @@ header {
 header img {
     position: absolute;
     width: 100%;
-    height: 600px;
+    height: 800px;
     object-fit: cover;
     opacity: 0;
     animation: slideShow 15s infinite;
@@ -112,83 +93,44 @@ header img:nth-child(3) { animation-delay: 10s; }
     100% { opacity: 0; transform: scale(1.05); }
 }
 
-/* ---------- MAIN LAYOUT ---------- */
+/* ---------- ABOUT SECTION ---------- */
 main {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 40px auto 60px;
     padding: 0 20px;
 }
 
-/* Profile + Text Section */
 .info-card {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
     background: #151515;
     border-radius: 16px;
-    padding: 28px;
+    padding: 32px;
     box-shadow: 0 0 25px rgba(255, 59, 0, 0.6);
     border: 1px solid rgba(255, 123, 0, 0.4);
+    text-align: center;
 }
 
-/* Profile Image */
-.profile {
-    width: 260px;
-    height: 260px;
-    border-radius: 14px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 0 25px rgba(255, 59, 0, 0.9);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.profile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.profile:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(255, 123, 0, 1);
-}
-
-.profile:hover img {
-    transform: scale(1.12);
-    filter: saturate(1.3);
-}
-
-/* Text Content */
-.text-block {
-    flex: 1;
-    color: #ffffff;
-}
-
-.text-block h3 {
-    margin: 0 0 12px;
-    font-size: 1.4rem;
-    letter-spacing: 0.08em;
+.info-card h3 {
+    margin: 0 0 18px;
+    font-size: 1.6rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #ff7b00;
 }
 
-.text-block p {
-    margin: 0 0 14px;
-    line-height: 1.6;
-    font-size: 0.98rem;
+.info-card p {
+    margin: 0 0 16px;
+    line-height: 1.7;
+    font-size: 1.1rem;
     color: #f5f5f5;
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
-    .info-card {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 600px) {
+    header {
+        height: 450px;
     }
-
-    .profile {
-        margin-bottom: 20px;
+    header img {
+        height: 450px;
     }
 }
 </style>
@@ -210,28 +152,23 @@ main {
 </section>
 
 <header>
-    <img src="cat.jpg" alt="Slide 1">
+    <img src="boston.jpg" alt="Slide 1">
     <img src="retro.jpg" alt="Slide 2">
-    <img src="boston.jpg" alt="Slide 3">
+    <img src="cat.jpg" alt="Slide 3">
 </header>
 
 <main>
     <section class="info-card">
-        <div class="profile">
-            <img src="me.jpg" alt="Profile Photo">
-        </div>
-        <div class="text-block">
-            <h3>About This Portfolio</h3>
-            <p>
-                This portfolio showcases the skills I’ve learned in my Multimedia class, including Photoshop,
-                Illustrator, Premiere Pro, and animation. It highlights my growth in visual design, editing,
-                and storytelling.
-            </p>
-            <p>
-                I plan to expand my abilities in advanced compositing, motion graphics, color grading,
-                and professional-level animation to create polished, engaging media across different platforms.
-            </p>
-        </div>
+        <h3>About This Portfolio</h3>
+        <p>
+            This portfolio showcases the skills I’ve learned in my Multimedia class, including Photoshop,
+            Illustrator, Premiere Pro, and animation. It highlights my growth in visual design, editing,
+            and storytelling.
+        </p>
+        <p>
+            I plan to expand my abilities in advanced compositing, motion graphics, color grading,
+            and professional-level animation to create polished, engaging media across different platforms.
+        </p>
     </section>
 </main>
 
