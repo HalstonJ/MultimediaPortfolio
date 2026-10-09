@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Illustrator Projects</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #050505;
+    color: #ffffff;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+    background: linear-gradient(90deg, #ff3b00, #ff7b00, #ff3b00);
+    padding: 14px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    box-shadow: 0 0 25px rgba(255, 59, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #000000;
+    text-shadow: 0 0 12px #ffffff;
+}
+
+/* ---------- PAGE TITLE ---------- */
+.page-title {
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle at top, #ff7b00 0%, #050505 55%);
+}
+
+.page-title h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ff7b00;
+}
+
+.page-title h2 {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ff3b00;
+}
+
+/* ---------- PHOTO CARDS ---------- */
+.gallery {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.photo-card {
+    background: #151515;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 25px rgba(255, 59, 0, 0.6);
+    border: 1px solid rgba(255, 123, 0, 0.4);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(255, 123, 0, 1);
+}
+
+/* Image styling */
+.photo-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.photo-card img:hover {
+    transform: scale(1.05);
+    filter: saturate(1.3);
+}
+
+/* Description text */
+.photo-card p {
+    margin-top: 14px;
+    line-height: 1.6;
+    color: #f5f5f5;
+    font-size: 2rem;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="photoshop.html">Photoshop</a>
+    <a href="illustrator.html">Illustrator</a>
+    
+</nav>
+
+<section class="page-title">
+    <h1> my illustrator Projects</h1>
+    <h2>my best five</h2>
+</section>
+
+<div class="gallery">
+
+    <div class="photo-card">
+        <img src="julich-halston-godzilla.png" alt="Illustrator Project 1">
+        <p>This Godzilla scene was my first illustrator project, it was created using circles and triangles, then joining them with the Shape Builder tool. I used some gradients on the background too.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="julich-halston-logo.png" alt="Illustrator Project 2">
+        <p>Personal logo, sort of copying Pac-Man. I learned how to cut off parts of circles and thought it was cool so I made a "bigger fish" pac-man logo with my name on it.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="julich-halston-posterminimal.png" alt="Illustrator Project 3">
+        <p>My favorite project, I made this minimalist godzilla poster using shape builder. The background is the Japan flag to tie it in more.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="julich-halston-pen.jpg" alt="Illustrator Project 4">
+        <p>Simple quick project using the pen tool to make my dog look like the monopoly dude.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="julich-halston-pumpkin.png" alt="Illustrator Project 5">
+        <p>A pumpkin with arms and legs, my final illustrator project made using shape building and gradients.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
